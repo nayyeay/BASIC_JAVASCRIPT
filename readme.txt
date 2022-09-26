@@ -1,6 +1,4 @@
-++++++++++++++
+++++++++++++
 
 NAMA : NAYLA AZZAHRA
 KELAS : XII RPL 1
-
-##############
