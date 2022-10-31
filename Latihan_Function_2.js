@@ -1,12 +1,15 @@
-function main(team1, team2){
-    if(team1>team2){
-        console.log("Team 1 won");
-    }
-    else if(team1>team2){
-        console.log("Team 2 won");
-    }
-    else{
-        console.log("Draw")
-    }
+function score (team1, team2){
+    var a = "team 1 win!"
+    var b = "team 2 win!"
+    var c = "draw"
+if (team1 > 2){
+    return a;
 }
-main(2,4);
+else if (team2 > 2){
+    return b;
+}
+else{
+    return c;
+}
+}
+console.log(score(2, 4));
