@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <title>slider</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <style>
+        button{
+            background-color: blueviolet;
+            width: 60px;
+            height: 70px;
+            border-radius: 25px;
+        }
+        images{
+            background-color: palevioletred;
+        }
+    </style>
+</head>
+<body>
+        <button onclick="next()">prompt</button>
+        <img src="1_pwpb.jpg" width="400px" height="400px" alt="images" id="slider">
+        <button onclick="prev()">next</button>
+    <script>
+        var images = ['1_pwpb.jpg', '2_pwpb.jpg', '3_pwpb.jpg', '4_pwpb.jpg', '5_pwpb.jpg', '6_pwpb.jpg', '7_pwpb.jpg', '8_pwpb.jpg', '9_pwpb.jpg', '10_pwpb.jpg'] ;
+        var num = 0;
+        function next()
+        {
+            var slider = document.getElementById('slider');
+            num+=1;
+            if (num>=images.length)
+            {
+                num = 0;
+            }
+            slider.src = images[num];
+        }
+
+        function prev()
+        {
+            var slider = document.getElementById('slider');
+            num-=1;
+            if (num<0)
+            {
+                num = images.length-1;
+            }
+            slider.src = images[num]
+        }
+    </script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+</body>
+</html>

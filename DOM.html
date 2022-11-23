@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- lesson 46 changing elements, and choose it 
+    -->
+        <div id = "demo">
+        </div>
+        <p class="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ratione dolore minima? Fugit, maiores magnam! Expedita distinctio minus voluptatum, aliquam repellat beatae, ut doloribus vero cupiditate voluptas fuga debitis soluta!</p>
+        <p class="paragraf">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nihil repellat atque in, possimus at fugit, pariatur repellendus nesciunt aspernatur rem nobis laudantium beatae itaque sed nam eaque ad consectetur?</p>
+        <p class="paragraf">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi praesentium autem facilis dolore, corporis modi magnam veniam eligendi neque fuga ducimus eaque dolor deserunt iusto sunt tempore expedita consequatur fugiat.</p>
+        <p>
+            this is new
+        </p>
+     <script>
+        var div = document.getElementsByTagName('div');
+        // lesson 46
+        // get element By class Name
+        var paragraf = document.getElementsByClassName('paragraf')
+        console.log(paragraf.length)
+        setInterval(function(){
+            paragraf[0].style.backgroundColor = 'blue'
+            paragraf[1].style.backgroundColor = 'red'
+            paragraf[2].style.backgroundColor = 'green'
+            setTimeout(function(){
+                for(var x=0; x<paragraf.length; x++){
+                    paragraf[x].style.backgroundColor='black'
+                    paragraf[x].style.color='white'
+                }
+            },500)
+        },1000)
+
+
+        // get element By Id
+        var demo = document.getElementById('demo');
+        setInterval(function(){
+            demo.innerText = 'Hello world';
+            demo.style.backgroundColor = 'blue'
+            demo.style.color = 'white'
+            setTimeout(function(){
+                demo.innerText = 'Welcome';
+                demo.style.backgroundColor = 'gold';
+                demo.style.color = 'black';
+                demo.style.padding = '10px';
+            },500)
+        }, 1000) 
+
+
+        // get elements By class Name
+        var paragraf = document.getElementsByClassName('paragraf')
+        console.log(paragraf)
+        for(var x=0; x<paragraf.length;x++ ){
+            paragraf[x].style.color = 'purple'
+        }
+        
+        // get elments by ID
+        var b = document.getElementById('demo');
+        setInterval(function(){
+            b.innerHTML = 'Hello World'
+            b.style.color = 'white'
+            b.style.padding = '10px'
+            b.style.backgroundColor = 'gold'
+            setTimeout(function(){
+                b.innerHTML = 'Welcome to asia'
+                b.style.backgroundColor = 'black'
+            },500)
+        },1000)
+    </script>
+</body>
+</html>

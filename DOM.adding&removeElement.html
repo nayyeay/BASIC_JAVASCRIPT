@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createElement</title>
+</head>
+<body>
+    <!--1) create element-->
+    <div id ="demo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde consectetur totam voluptatibus dolorum non iste ducimus, sed voluptas aperiam? Voluptatibus rem inventore illum mollitia hic eos perferendis, itaque id maiores.</div>
+    
+    <script>
+        //lesson 48
+        //calling the function in window.onload to make sure the HTML is loaded
+window.onload = function() {
+    //creating a new paragraph
+    var p = document.createElement("p");
+    var p = document.createElement("h3");
+    var node = document.createTextNode("NAYYEAY");
+    //adding the text to the paragraph
+    p.appendChild(node);
+
+    var div = document.getElementById("demo");
+    //adding the paragraph to the div
+    div.appendChild(p);
+}   
+    </script>
+
+<!--==================================-->
+
+<!--2) remove-->
+<div id="demo">
+    <p id="p1"> ZEYAA</p>
+    <p id="p2">SYALINE</p>
+</div>
+<script>
+    //calling the function in window.onload to make sure the HTML is loaded
+window.onload = function() {
+    var parent = document.getElementById("demo");
+    var child = document.getElementById("p1");
+    parent.removeChild(child);
+};
+
+</script>
+
+<!--3) replace-->
+<div id="demo">
+    <p id="p1">This is a paragraph.</p>
+    <p id="p2">This is another paragraph.</p>
+</div>
+<script>
+    //calling the function in window.onload to make sure the HTML is loaded
+window.onload = function() {
+    var p = document.createElement("p");
+    var node = document.createTextNode("This is new");
+    p.appendChild(node);
+
+    var parent = document.getElementById("demo");
+    var child = document.getElementById("p1");
+    parent.replaceChild(p, child);
+};
+</script>
+</body>
+</html>

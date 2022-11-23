@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+    <style>
+        .show{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <!--untuk nama-->
+    <button onclick="show();">Click Me</button>
+
+    <script>
+        function show() {
+    alert("nananananayeayyy");
+}
+    </script>
+    
+
+
+    <!--untuk tanggal-->
+    <button id="demo">Date</button>
+    <script>
+        window.onload = function() {
+    var x = document.getElementById('demo');
+    x.onclick = function () {
+        document.body.innerHTML = Date();
+    }
+};
+    </script>
+
+<p></p>
+<br>
+    <!--cara bikin uppercase-->
+    <input type="text" id="name" onchange="change()">
+    <script>
+        function change() {
+    var x = document.getElementById('name');
+    x.value = x.value.toUpperCase();
+}
+    </script>
+
+
+<!--untuk start-->
+    <button id="demo">Start</button>
+    <script>
+        //calling the function in window.onload to make sure the HTML is loaded
+window.onload = function() {
+    var btn = document.getElementById("demo");
+    btn.addEventListener("click", myFunction);
+
+    function myFunction() {
+        alert(Math.random());
+        btn.removeEventListener("click", myFunction);
+    }
+};
+    </script>
+
+</body>
+</html>
